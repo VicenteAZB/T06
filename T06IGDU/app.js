@@ -64,11 +64,24 @@ const sound = new THREE.Audio(listener);
 
 // Cargar la canción
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load('t.mp3', (buffer) => {
-    sound.setBuffer(buffer);
-    sound.setLoop(true); // Reproducir en bucle
-    sound.setVolume(0.5); // Volumen de la música (puedes ajustar este valor)
-    sound.play(); // Iniciar la reproducción
+let audioStarted = false; // Variable para rastrear si el audio ha comenzado
+
+// Función para reproducir el sonido
+const playAudio = () => {
+    audioLoader.load('t.mp3', (buffer) => {
+        sound.setBuffer(buffer);
+        sound.setLoop(true); // Reproducir en bucle
+        sound.setVolume(0.5); // Volumen de la música (puedes ajustar este valor)
+        sound.play(); // Iniciar la reproducción
+    });
+};
+
+// Esperar a que el usuario haga clic para iniciar el audio
+document.addEventListener('click', () => {
+    if (!audioStarted) {
+        audioStarted = true;
+        playAudio();
+    }
 });
 
 // Animación y renderizado
@@ -79,7 +92,7 @@ function animate() {
     if (model1) model1.rotation.y += 0.01;
     if (model2) model2.rotation.y -= 0.01;
     if (model3) model3.rotation.y += 0.01;
-    
+
     // Actualizar controles
     controls.update();
 
