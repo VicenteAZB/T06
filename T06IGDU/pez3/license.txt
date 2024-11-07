@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pez Carachama - Pseudorinelepis genibarbis
+* source:	https://sketchfab.com/3d-models/pez-carachama-pseudorinelepis-genibarbis-27a4897235a942778380222f81ad66e0
+* author:	Elvislkn (https://sketchfab.com/Elvislkn)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pez Carachama - Pseudorinelepis genibarbis" (https://sketchfab.com/3d-models/pez-carachama-pseudorinelepis-genibarbis-27a4897235a942778380222f81ad66e0) by Elvislkn (https://sketchfab.com/Elvislkn) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
