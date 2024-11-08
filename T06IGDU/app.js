@@ -9,6 +9,21 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// Agregar niebla para simular agua
+scene.fog = new THREE.Fog(0x70c5d3, 400, 800); // Azul claro, distancia inicial y final
+
+// Crear Skybox de agua
+const load = new THREE.CubeTextureLoader();
+const texture = load.load([
+    'fondo.jpg', // Lado derecho
+    'fondo.jpg', // Lado izquierdo
+    'fondo.jpg', // Lado superior
+    'fondo.jpg', // Lado inferior
+    'fondo.jpg', // Frente
+    'fondo.jpg'  // Atrás
+]);
+scene.background = texture;
+
 // Agregar luz ambiental básica
 const light = new THREE.AmbientLight(0x808080); // Luz ambiental
 scene.add(light);
